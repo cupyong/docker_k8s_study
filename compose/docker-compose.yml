@@ -3,7 +3,7 @@ services:
   myweb:
     restart: always
     image: go_docker:1.0
-    contrainer_name: godocker
+    container_name: godocker
     volumes:
       - /root/compose/config.yaml:/compose/config.yaml
     ports:
