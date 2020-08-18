@@ -1,6 +1,6 @@
 FROM golang:1.14.7
-WORKDIR /hellodocker
-ADD . /hellodocker
+WORKDIR /compose
+ADD . /compose
 RUN go build .
 EXPOSE 6001
-ENTRYPOINT ["./hellodocker"]
+ENTRYPOINT ["./compose"]
