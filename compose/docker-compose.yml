@@ -1,0 +1,23 @@
+version: '3'
+services :
+  myweb: --服务名
+    restart:always
+    image:tomcat  --镜像名
+    contrainer_name:tomcat  --容器名
+    volumes:
+      -/user/local/docker/myspring/tomcat/webapps:/usr/local/tomcat/webapps/
+    ports:
+      - 6001:6001
+  mysql:
+    restart:always
+    image:mysql:5.7
+    container_name:mysql
+    ports:
+      -3306:3306
+    enbironment:
+      MYSQL_ROOT_PASSWORD:123456
+    command:
+      --max_allowed_packet=128M
+    volumes:
+      - /root/mysql/logs:/var/log/mysql
+      - /root/mysql/data:/var/lib/mysql
