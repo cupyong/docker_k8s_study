@@ -1,11 +1,11 @@
 version: '3'
 services :
-  myweb: --服务名
+  myweb:
     restart:always
-    image:tomcat  --镜像名
-    contrainer_name:tomcat  --容器名
+    image:go_docker:1.0
+    contrainer_name:godocker
     volumes:
-      -/user/local/docker/myspring/tomcat/webapps:/usr/local/tomcat/webapps/
+      - /root/compose/config.yaml:/compose/config.yaml
     ports:
       - 6001:6001
   mysql:

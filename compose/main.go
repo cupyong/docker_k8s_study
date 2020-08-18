@@ -65,5 +65,6 @@ func hello(c echo.Context) error {
 	if err != nil {
 		fmt.Println("exec failed, ", err)
 	}
+	fmt.Println(person)
 	return c.String(http.StatusOK, "person num:"+strconv.Itoa(len(person)))
 }

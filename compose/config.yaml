@@ -1,1 +1,1 @@
-mysql: root:@tcp(127.0.0.1:3306)/test
+mysql: root:123456@tcp(192.168.2.175:3306)/test
