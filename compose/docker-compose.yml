@@ -1,19 +1,19 @@
 version: '3'
 services:
   myweb:
-    restart:always
-    image:go_docker:1.0
-    contrainer_name:godocker
+    restart: always
+    image: go_docker:1.0
+    contrainer_name: godocker
     volumes:
       - /root/compose/config.yaml:/compose/config.yaml
     ports:
       - 6001:6001
   mysql:
-    restart:always
-    image:mysql:5.7
-    container_name:mysql
+    restart: always
+    image: mysql:5.7
+    container_name: mysql
     ports:
-      -3306:3306
+      - 3306:3306
     enbironment:
       MYSQL_ROOT_PASSWORD:123456
     command:
