@@ -19,5 +19,5 @@ services:
     command:
       --max_allowed_packet=128M
     volumes:
-      - /root/mysql1/logs:/var/log/mysql
-      - /root/mysql1/data:/var/lib/mysql
+      - /root/mysql/logs:/var/log/mysql
+      - /root/mysql/data:/var/lib/mysql
