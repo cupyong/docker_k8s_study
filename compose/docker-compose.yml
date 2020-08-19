@@ -14,8 +14,8 @@ services:
     container_name: mysql
     ports:
       - 3306:3306
-    enbironment:
-      MYSQL_ROOT_PASSWORD:123456
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
     command:
       --max_allowed_packet=128M
     volumes:
